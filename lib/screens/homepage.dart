@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 50,
+              height: 40,
             ),
             AuthButton(
               text: 'Login',
@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
               buttonColor: AppColours.bgSky,
             ),
             SizedBox(
-              height: 10,
+              height: 20,
             ),
             AuthButton(
               text: 'Register',
