@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../constants.dart';
 import '../screens/daily_expenses.dart';
 import '../screens/monthly_expenses.dart';
+import '../widgets/drawer.dart';
 
 class ExpensesPage extends StatelessWidget {
   @override
@@ -14,12 +15,11 @@ class ExpensesPage extends StatelessWidget {
       length: 2,
       child: Scaffold(
           backgroundColor: AppColours.background,
+          drawer: MainDrawer(),
           appBar: AppBar(
             backgroundColor: AppColours.background,
-            leading: IconButton(
-              icon: Icon(Icons.dehaze),
-              color: AppColours.bgYellow,
-              onPressed: () {},
+            iconTheme: IconThemeData(
+              color: AppColours.bgSky,
             ),
             title: Center(
               child: Text(
@@ -36,34 +36,37 @@ class ExpensesPage extends StatelessWidget {
                 icon: Icon(
                   Icons.filter_list,
                 ),
-                color: AppColours.bgYellow,
+                color: AppColours.bgSky,
                 onPressed: () {},
               )
             ],
-            bottom: TabBar(tabs: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Text(
-                  'Daily',
-                  style: GoogleFonts.roboto(
-                    color: AppColours.textHeading,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
+            bottom: TabBar(
+              indicatorColor: AppColours.bgSky,
+              tabs: [
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Text(
+                    'Daily',
+                    style: GoogleFonts.roboto(
+                      color: AppColours.textHeading,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Text(
-                  'Monthly',
-                  style: GoogleFonts.roboto(
-                    color: AppColours.textHeading,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Text(
+                    'Monthly',
+                    style: GoogleFonts.roboto(
+                      color: AppColours.textHeading,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
-              ),
-            ]),
+              ],
+            ),
           ),
           body: TabBarView(
             children: [
