@@ -7,25 +7,31 @@ class AuthButton extends StatelessWidget {
   final Color buttonColor;
   final String text;
   final Function onPressed;
+  final double height;
+  final double minWidth;
   AuthButton({
     required this.buttonColor,
     required this.onPressed,
     required this.text,
+    required this.height,
+    required this.minWidth,
   });
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
       color: buttonColor,
-      height: 50,
-      minWidth: 200,
+      height: height,
+      minWidth: minWidth,
       elevation: 8,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(10),
         ),
       ),
-      onPressed: () {},
+      onPressed: () {
+        onPressed();
+      },
       child: Text(
         text,
         style: GoogleFonts.roboto(

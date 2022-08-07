@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:wallet_tracker/routes/route_names.dart';
 
+import '../routes/route_names.dart';
 import '../screens/homepage.dart';
+import '../screens/login_page.dart';
+import '../screens/register_page.dart';
 
 class AppRoutes {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RouteNames.homepage:
-        return MaterialPageRoute(builder: (_) => HomePage());
+        return MaterialPageRoute<dynamic>(builder: (_) => HomePage());
+      case RouteNames.login:
+        return MaterialPageRoute<dynamic>(builder: (_) => LoginPage());
+      case RouteNames.register:
+        return MaterialPageRoute<dynamic>(builder: (_) => RegisterPage());
       default:
         return MaterialPageRoute<dynamic>(
           builder: (_) => Scaffold(
