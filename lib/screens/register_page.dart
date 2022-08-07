@@ -82,6 +82,8 @@ class RegisterPage extends StatelessWidget {
                   onPressed: () {
                     // implement register feature of app
                     // proceed to next screen
+                    Navigator.pushReplacementNamed(
+                        context, RouteNames.expenses);
                   },
                   height: 50,
                   minWidth: 180,

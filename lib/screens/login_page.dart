@@ -69,6 +69,8 @@ class LoginPage extends StatelessWidget {
                   onPressed: () {
                     // implement login feature of app
                     // proceed to next screen
+                    Navigator.pushReplacementNamed(
+                        context, RouteNames.expenses);
                   },
                   height: 50,
                   minWidth: 180,

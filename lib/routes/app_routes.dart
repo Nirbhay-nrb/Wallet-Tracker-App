@@ -4,6 +4,7 @@ import '../routes/route_names.dart';
 import '../screens/homepage.dart';
 import '../screens/login_page.dart';
 import '../screens/register_page.dart';
+import '../screens/expenses_page.dart';
 
 class AppRoutes {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -14,6 +15,8 @@ class AppRoutes {
         return MaterialPageRoute<dynamic>(builder: (_) => LoginPage());
       case RouteNames.register:
         return MaterialPageRoute<dynamic>(builder: (_) => RegisterPage());
+      case RouteNames.expenses:
+        return MaterialPageRoute<dynamic>(builder: (_) => ExpensesPage());
       default:
         return MaterialPageRoute<dynamic>(
           builder: (_) => Scaffold(
